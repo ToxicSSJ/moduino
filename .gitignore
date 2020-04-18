@@ -39,7 +39,6 @@ tests/
 code-generator.iml
 
 # Package Files #
-*.jar
 *.war
 *.nar
 *.ear
