@@ -1,9 +1,9 @@
 package me.itoxic.moduino.generator.type.arduino;
 
 import me.itoxic.moduino.generator.type.arduino.references.ArduinoModelType;
-import me.itoxic.moduino.metamodel.arduino.classes.model.pins.AnalogPin;
-import me.itoxic.moduino.metamodel.arduino.classes.model.pins.DigitalPin;
-import me.itoxic.moduino.metamodel.arduino.classes.model.pins.PWMPin;
+import me.itoxic.moduino.metamodel.arduino.entries.model.pins.AnalogPin;
+import me.itoxic.moduino.metamodel.arduino.entries.model.pins.DigitalPin;
+import me.itoxic.moduino.metamodel.arduino.entries.model.pins.PWMPin;
 
 import java.util.LinkedList;
 

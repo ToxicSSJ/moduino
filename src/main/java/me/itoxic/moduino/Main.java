@@ -3,12 +3,12 @@ package me.itoxic.moduino;
 import me.itoxic.moduino.generator.buffer.CodeBuffer;
 import me.itoxic.moduino.metamodel.arduino.ArduinoMetamodel;
 import me.itoxic.moduino.metamodel.arduino.ArduinoMetamodelManager;
-import me.itoxic.moduino.metamodel.arduino.classes.Project;
-import me.itoxic.moduino.metamodel.arduino.classes.model.uno.ArduinoUnoBoard;
-import me.itoxic.moduino.metamodel.arduino.classes.sketch.Sketch;
-import me.itoxic.moduino.metamodel.arduino.classes.sketch.SketchFunction;
-import me.itoxic.moduino.metamodel.arduino.classes.sketch.variables.SketchIntegerVariable;
-import me.itoxic.moduino.metamodel.arduino.classes.sketch.variables.SketchStringVariable;
+import me.itoxic.moduino.metamodel.arduino.entries.Project;
+import me.itoxic.moduino.metamodel.arduino.entries.model.uno.ArduinoUnoBoard;
+import me.itoxic.moduino.metamodel.arduino.entries.sketch.Sketch;
+import me.itoxic.moduino.metamodel.arduino.entries.sketch.SketchFunction;
+import me.itoxic.moduino.metamodel.arduino.entries.sketch.variables.SketchIntegerVariable;
+import me.itoxic.moduino.metamodel.arduino.entries.sketch.variables.SketchStringVariable;
 
 import java.io.IOException;
 

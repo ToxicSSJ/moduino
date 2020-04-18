@@ -4,7 +4,7 @@ import me.itoxic.moduino.generator.arduino.booleans.ArduinoBooleansTest;
 import me.itoxic.moduino.generator.arduino.errors.ArduinoErrorsTest;
 import me.itoxic.moduino.generator.arduino.integers.ArduinoIntegersTest;
 import me.itoxic.moduino.metamodel.arduino.ArduinoMetamodelManager;
-import me.itoxic.moduino.metamodel.arduino.classes.Project;
+import me.itoxic.moduino.metamodel.arduino.entries.Project;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;

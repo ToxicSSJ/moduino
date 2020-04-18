@@ -2,11 +2,11 @@ package me.itoxic.moduino.generator.arduino.errors;
 
 import me.itoxic.moduino.MainTest;
 import me.itoxic.moduino.generator.buffer.CodeBuffer;
-import me.itoxic.moduino.metamodel.arduino.classes.Project;
-import me.itoxic.moduino.metamodel.arduino.classes.model.uno.ArduinoUnoBoard;
-import me.itoxic.moduino.metamodel.arduino.classes.sketch.Sketch;
-import me.itoxic.moduino.metamodel.arduino.classes.sketch.SketchFunction;
-import me.itoxic.moduino.metamodel.arduino.classes.sketch.variables.SketchBooleanVariable;
+import me.itoxic.moduino.metamodel.arduino.entries.Project;
+import me.itoxic.moduino.metamodel.arduino.entries.model.uno.ArduinoUnoBoard;
+import me.itoxic.moduino.metamodel.arduino.entries.sketch.Sketch;
+import me.itoxic.moduino.metamodel.arduino.entries.sketch.SketchFunction;
+import me.itoxic.moduino.metamodel.arduino.entries.sketch.variables.SketchBooleanVariable;
 import org.junit.Test;
 
 import java.net.UnknownHostException;
