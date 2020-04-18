@@ -32,7 +32,7 @@ Moduino's first metamodels were developed with [EMF](https://www.eclipse.org/mod
 </dependency>
 ```
 
-# Examples
+# Example
 
 Below is a basic example with the current version, at the moment the instances must be encoded, and with the content the code based on the meta-model is produced. It is important to note that some sentences are still being translated into English.
 
