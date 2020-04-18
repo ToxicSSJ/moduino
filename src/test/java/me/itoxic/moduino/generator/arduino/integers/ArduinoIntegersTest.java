@@ -16,7 +16,6 @@ import me.itoxic.moduino.metamodel.arduino.classes.sketch.preloads.SketchNativeF
 import me.itoxic.moduino.metamodel.arduino.classes.sketch.variables.SketchIntegerVariable;
 import me.itoxic.moduino.metamodel.arduino.classes.sketch.variables.operator.SketchNumberOperator;
 import me.itoxic.moduino.metamodel.arduino.classes.type.PinMode;
-import me.itoxic.moduino.metamodel.arduino.classes.sketch.operations.*;
 import org.junit.Test;
 
 import java.net.UnknownHostException;

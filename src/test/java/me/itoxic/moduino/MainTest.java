@@ -1,6 +1,7 @@
 package me.itoxic.moduino;
 
 import me.itoxic.moduino.generator.arduino.booleans.ArduinoBooleansTest;
+import me.itoxic.moduino.generator.arduino.errors.ArduinoErrorsTest;
 import me.itoxic.moduino.generator.arduino.integers.ArduinoIntegersTest;
 import me.itoxic.moduino.metamodel.arduino.ArduinoMetamodelManager;
 import me.itoxic.moduino.metamodel.arduino.classes.Project;
@@ -12,10 +13,9 @@ import static org.junit.Assert.fail;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-
     ArduinoBooleansTest.class,
-    ArduinoIntegersTest.class
-
+    ArduinoIntegersTest.class,
+    ArduinoErrorsTest.class
 })
 public class MainTest {
 
