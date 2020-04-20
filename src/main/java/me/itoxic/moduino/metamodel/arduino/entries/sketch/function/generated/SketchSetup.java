@@ -54,7 +54,7 @@ public class SketchSetup extends SketchFunction {
             buffer.appendBreakline();
 
         for(Pin pin : pins)
-            if(pin.isUsed())
+            if(pin.isUsed() && pin.getPinMode() == PinMode.OUTPUT)
                 buffer.appendLine("pinMode(" + pin.getLabel() + ", " + pin.getPinMode().name() + ");");
 
     }
