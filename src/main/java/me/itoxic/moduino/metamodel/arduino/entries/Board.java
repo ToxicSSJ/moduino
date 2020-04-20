@@ -163,12 +163,12 @@ public abstract class Board implements CodeContainer {
         CodeBuffer buffer = new CodeBuffer(getFileName(), "arduino", true);
 
         buffer.appendStartlines(
-                "Autor: " + InetAddress.getLocalHost().getHostName(),
-                "Día de Generación: " + new SimpleDateFormat("yyyy-MM-dd").format(new Date()),
+                "Author: " + InetAddress.getLocalHost().getHostName(),
+                "Generation Date: " + new SimpleDateFormat("yyyy-MM-dd").format(new Date()),
                 "",
-                "Modelo de Arduino: " + modelType.getModelName(),
-                "Nombre del Archivo: " + getFileName(),
-                "Nombre del Modulo: " + getModuleName());
+                "Arduino Model: " + modelType.getModelName(),
+                "Filename: " + getFileName(),
+                "Module Name: " + getModuleName());
 
         buffer.appendBreakline();
 
