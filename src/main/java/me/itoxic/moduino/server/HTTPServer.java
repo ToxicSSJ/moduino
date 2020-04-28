@@ -18,6 +18,7 @@ import java.util.UUID;
  * @since   2019-07-26
  *
  */
+@Deprecated
 public class HTTPServer {
 
     private String id;

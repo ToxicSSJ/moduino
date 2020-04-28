@@ -1,5 +1,6 @@
 package me.itoxic.moduino.metamodel.arduino.restrictions.exceptions;
 
+@Deprecated
 public enum RestrictionExceptionType {
 
     ;

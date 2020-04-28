@@ -6,6 +6,7 @@ import com.sun.net.httpserver.HttpHandler;
 import java.io.IOException;
 import java.io.OutputStream;
 
+@Deprecated
 public class GenerateHandler implements HttpHandler {
 
     public void handle(HttpExchange t) {
