@@ -4,6 +4,7 @@ import me.itoxic.moduino.generator.buffer.CodeBuffer;
 import me.itoxic.moduino.metamodel.arduino.entries.Board;
 import me.itoxic.moduino.metamodel.arduino.entries.sketch.function.generated.SketchLoop;
 import me.itoxic.moduino.metamodel.arduino.entries.sketch.function.generated.SketchSetup;
+import me.itoxic.moduino.metamodel.arduino.entries.sketch.variables.SketchLibraryVariable;
 import me.itoxic.moduino.metamodel.arduino.restrictions.exceptions.ArduinoRestrictionException;
 
 import java.util.LinkedList;
@@ -16,6 +17,7 @@ public class Sketch implements SketchInstruction {
     private LinkedList<SketchPreprocessor> preprocessors;
     private LinkedList<SketchInstruction> instructions;
     private LinkedList<SketchVariable> variables;
+    private LinkedList<SketchLibraryVariable> libraryVariables;
     private LinkedList<SketchFunction> functions;
 
     public Sketch(Board board) {
@@ -74,6 +76,33 @@ public class Sketch implements SketchInstruction {
         // Fin de la Restricción
 
         variables.add(variable);
+
+    }
+
+    public void addLibraryVariables(SketchLibraryVariable...libraryVariables) {
+        for(SketchLibraryVariable variable : libraryVariables)
+            addLibraryVariable(variable);
+    }
+
+    public void addLibraryVariable(SketchLibraryVariable libraryVariable) {
+
+        //
+        // Sketch Restricción de Variables
+        //
+        // Funciona para validar que no se añada
+        // la misma variable o el mismo label
+        // de variable.
+        //
+
+        for(SketchLibraryVariable v : libraryVariables)
+            if(v == libraryVariable)
+                throw new ArduinoRestrictionException("La variable de libreria " + v.getLabel() + " ya fue añadida al contexto general del Sketch.");
+            else if(v.getLabel().equals(libraryVariable.getLabel()))
+                throw new ArduinoRestrictionException("Ya existe una variable del mismo nombre '" + v.getLabel() + "' que fue añadida al contexto general del Sketch.");
+
+        // Fin de la Restricción
+
+        libraryVariables.add(libraryVariable);
 
     }
 
@@ -148,6 +177,12 @@ public class Sketch implements SketchInstruction {
 
         for(SketchInstruction instruction : instructions)
             instruction.appendCodeLiteral(buffer);
+
+        if(libraryVariables.size() > 0)
+            buffer.appendBreakline();
+
+        for(SketchLibraryVariable libraryVariable : libraryVariables)
+            libraryVariable.appendCodeLiteral(buffer);
 
         if(instructions.size() > 0)
             buffer.appendBreakline();
