@@ -5,11 +5,11 @@ import me.itoxic.moduino.util.properties.PropertiesHelper;
 
 public enum PropertiesFileType {
 
-    ARDUINO_UNO("model/arduino_uno"),
-    ARDUINO_LEONARDO("model/arduino_leonardo"),
-    ARDUINO_MEGA("model/arduino_mega"),
+    ARDUINO_UNO("/model/arduino_uno"),
+    // ARDUINO_LEONARDO("model/arduino_leonardo"),
+    ARDUINO_MEGA("/model/arduino_mega"),
 
-    C_LANGUAGE_INFO("code/c_lang");
+    C_LANGUAGE_INFO("/code/c_lang");
 
     String path;
 

@@ -27,6 +27,7 @@ public class Sketch implements SketchInstruction {
 
         this.preprocessors = new LinkedList<>();
         this.variables = new LinkedList<>();
+        this.libraryVariables = new LinkedList<>();
         this.instructions = new LinkedList<>();
         this.functions = new LinkedList<>();
 
