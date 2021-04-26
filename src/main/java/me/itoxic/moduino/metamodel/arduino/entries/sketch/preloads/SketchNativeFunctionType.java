@@ -133,6 +133,8 @@ public enum SketchNativeFunctionType {
 
             if(clazz.isInstance(sketchVariable))
                 call.append(sketchVariable.getParametizedForm() + (parameters.length - 1 == parampos ? "" : ", "));
+            else if(clazz == SketchFloatVariable.class && sketchVariable.getClass() == SketchDoubleVariable.class)
+                call.append(sketchVariable.getParametizedForm() + (parameters.length - 1 == parampos ? "" : ", "));
             else
                 throw new ArduinoRestrictionException("Se está utilizando un tipo de variable invalida para la función nativa '" + this.name() + "', se debe utilizar '" + clazz.getName() + "' en vez de '" + sketchVariable.getClass().getName() + "'.");
 

@@ -36,6 +36,7 @@ tests
 classes/
 target/
 tests/
+build/
 code-generator.iml
 
 # Package Files #
